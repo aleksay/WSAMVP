@@ -19,18 +19,26 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        <p>srdthewryrtyrtb</p>
         <div class="menu">
+            <p>sb</p>
             <% 
                 String id_rist = "1";
                 RequestDispatcher rd = request.getRequestDispatcher("MenuController");
                 request.setAttribute("type", "DISPLAY_MENU_ID");
                 request.setAttribute("_id", id_rist);
                 rd.forward(request, response);
-                System.out.println("quiiii");
+                
             %>
+            <p>srdthb</p>
         </div>
         <div>
-            <input type="button" onclick="AddForm()" value="Aggiungi">
+            <form>
+                <span>btn</span>
+                <input type="button" onclick="AddForm()" value="Aggiungi" >
+                testo 
+                <% System.out.println("qqqq"); %>
+            </form>
         </div>
     </body>
 </html>

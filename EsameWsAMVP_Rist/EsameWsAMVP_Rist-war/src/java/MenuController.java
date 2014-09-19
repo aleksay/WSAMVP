@@ -50,6 +50,9 @@ public class MenuController extends HttpServlet {
                 }
                 catch(Exception ex) { ex.printStackTrace(); }
             }
+            if(request.getAttribute("type").toString().equals("ADD_MENU")){
+                addMenuEntry(request.getAttribute("id_rist").toString(), request.getAttribute("piatto").toString());
+            }
         }
     }
 
@@ -106,6 +109,13 @@ public class MenuController extends HttpServlet {
         String res = port.displayMenuRist(idRist);
         System.out.println("res = " + res);
         return res;
+    }
+
+    private void addMenuEntry(java.lang.String idRist, java.lang.String piatto) {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        wspackage.WSJustEat port = service.getWSJustEatPort();
+        port.addMenuEntry(idRist, piatto);
     }
 
 }

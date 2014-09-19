@@ -10,11 +10,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Aggiungi Piatto</title>
+        <script type="text/javascript">
+            function AddMenu(){
+                var piatto = document.getElementById("nome_piatto").textContent;
+                window.location = "AggiungiPiattoWS.jsp?id_rist=1&piatto=" + piatto;
+                return false;
+            }
+        </script>
     </head>
     <body>
         <h1>Nuovo Piatto</h1>
         <div>
-            <input id="nome_piatto">
+            <span>Nome piatto:</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" style="width: 300px;" id="nome_piatto">
+            <br/><br/>
+            <input type="button" value="Aggiungi">
         </div>
     </body>
 </html>
