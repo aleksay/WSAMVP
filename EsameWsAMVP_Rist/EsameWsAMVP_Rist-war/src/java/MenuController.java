@@ -44,13 +44,12 @@ public class MenuController extends HttpServlet {
             }
             if(request.getAttribute("type").toString().equals("DISPLAY_MENU_ID")){
                 try (PrintWriter out = response.getWriter()) {
-                    System.out.println("try --- " + (String) request.getAttribute("_id"));
                    out.print(displayMenuRist((String) request.getAttribute("_id")));
-                    System.out.println("try2");
                 }
                 catch(Exception ex) { ex.printStackTrace(); }
             }
             if(request.getAttribute("type").toString().equals("ADD_MENU")){
+                                    System.out.println("add attempt vp");
                 addMenuEntry(request.getAttribute("id_rist").toString(), request.getAttribute("piatto").toString());
             }
         }

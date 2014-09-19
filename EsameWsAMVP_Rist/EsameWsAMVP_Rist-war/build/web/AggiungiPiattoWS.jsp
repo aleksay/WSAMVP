@@ -18,7 +18,9 @@
             request.setAttribute("id_rist", request.getParameter("id_rist"));
             request.setAttribute("piatto", request.getParameter("piatto"));
             rd.forward(request, response);
+            System.out.println("aggiungipiattoWS piatto=" + request.getParameter("piatto") + " idrist=" + request.getParameter("id_rist"));
             response.sendRedirect("index.jsp");
+            System.out.println("end aggiungi piatto ws");
         %>
     </body>
 </html>

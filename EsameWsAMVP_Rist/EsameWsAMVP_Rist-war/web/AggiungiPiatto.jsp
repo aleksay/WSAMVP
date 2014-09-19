@@ -12,7 +12,7 @@
         <title>Aggiungi Piatto</title>
         <script type="text/javascript">
             function AddMenu(){
-                var piatto = document.getElementById("nome_piatto").textContent;
+                var piatto = document.getElementById("nome_piatto").value;
                 window.location = "AggiungiPiattoWS.jsp?id_rist=1&piatto=" + piatto;
                 return false;
             }
@@ -24,7 +24,7 @@
             <span>Nome piatto:</span>&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="text" style="width: 300px;" id="nome_piatto">
             <br/><br/>
-            <input type="button" value="Aggiungi">
+            <input type="button" value="Aggiungi" onclick="AddMenu()">
         </div>
     </body>
 </html>
