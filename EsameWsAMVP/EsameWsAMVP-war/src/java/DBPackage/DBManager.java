@@ -59,6 +59,7 @@ public class DBManager {
             catch (Exception ex) {
                 ex.printStackTrace();
                 System.out.println(ex.toString());
+                System.out.println("committo");
             }
         }
         System.out.println("ret from DBManager = " + ret);
